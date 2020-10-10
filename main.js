@@ -15,7 +15,7 @@ function addTodo(event) {
     todoDiv.classList.add("todo");
     //Create Li
     const newTodo = document.createElement("li");
-    newTodo.innerText = "task no 1";
+    newTodo.innerText = todoInput.value;
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
     //Check Mark button
@@ -30,4 +30,6 @@ function addTodo(event) {
     todoDiv.appendChild(trashButton);
     //Append to list
     todolist.appendChild(todoDiv);
+    //Clear todo input value
+    todoInput.value = '';
 }
